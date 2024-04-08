@@ -31,9 +31,10 @@ h1 {
 }
 
 .count-wrapper {
-  width: 140px;
-  height: 140px;
-  background: #f8f9fa;
+  width: 200px;
+  height: 200px;
+  background: lightgray;
+  
   position: relative;
   display: flex;
   justify-content: center;
@@ -44,8 +45,8 @@ h1 {
 
 .count-wrapper div {
   font-weight: 900;
-  font-size: 4rem;
-  color: #999;
+  font-size: 6rem;
+  color: darkcyan;
 }
 
 .count-wrapper span {
@@ -54,6 +55,7 @@ h1 {
   bottom: 0;
   text-align: center;
   padding: .2rem 0;
-  background: #999;
+  background: black;
+  color: white;
 }
 
