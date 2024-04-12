@@ -8,11 +8,16 @@
   
 }
 
+html, body{
+  width: 100%; height: 100%;
+}
+
+
 body {
   width: 100%;
   height: 100vh;
   background-image: url(https://iurd-deploy.s3.us-east-2.amazonaws.com/contador_regressivo/assets/images/background.png);
-  background-size: 100rem;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -26,18 +31,21 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 2rem;
   font-size: 4.6rem;
-  color: #f8f9fa;
+  color: white;
   font-weight: 900;
 }
 
 .wrapper {
   display: flex;
+
+  
 }
 
 .count-wrapper {
   width: 200px;
-  height: 200px;
+  height: 190px;
   background: white;
+  
   
   position: relative;
   display: flex;
@@ -45,7 +53,7 @@ h1 {
   align-items: center;
   flex-direction: row;
   margin: 0 .6rem;
-  padding-bottom: 1rem;
+  
 
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -53,8 +61,37 @@ h1 {
 
 .count-wrapper div {
   font-weight: 900;
-  font-size: 6rem;
+  font-size: 5rem;
   color: darkcyan;
+}
+
+@keyframes load{
+  to{transform: rotate(360deg)}
+}
+/*
+.pre{
+  width: 80px;
+  height: 80px;
+  background-image: url(https://iurd-deploy.s3.us-east-2.amazonaws.com/contador_regressivo/assets/images/load.png);
+  background-position: center;
+  background-size: contain;
+  animation: load 2s infinite linear;
+}
+
+.box-load{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  display: none;
+  align-self: flex-end;
+  padding-bottom: 10rem;
 }
 /*
 .count-wrapper span {
@@ -83,22 +120,39 @@ h1 {
 }
 */
 
-@media (max-width: 500px){
+@media (max-width: 700px){
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://iurd-deploy.s3.us-east-2.amazonaws.com/contador_regressivo/assets/images/background_celular.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+  }
   
   .wrapper {
     display: flex;
+    align-self: flex-end;
+    padding-bottom: 10rem;
+    
   }
   
   .count-wrapper {
-    width: 95px;
+    width: 85px;
     height: 90px;
-    background: white;
+    background: #235B54;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 0 .1rem;
+    margin: 0.2rem;
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
   
@@ -107,14 +161,40 @@ h1 {
   }
   
   .count-wrapper div {
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     font-weight: 900;
-    font-size: 2.5rem;
-    color: darkcyan;
+    font-size: 2.2rem;
+    color: white;
+    
     
   }
+/*
+  .pre{
+    width: 80px;
+    height: 80px;
+    background-image: url(https://iurd-deploy.s3.us-east-2.amazonaws.com/contador_regressivo/assets/images/load.png);
+    background-position: center;
+    background-size: contain;
+    animation: load 2s infinite linear;
+  }
   
-  /*.count-wrapper span {
+  .box-load{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content{
+    display: none;
+    align-self: flex-end;
+    padding-bottom: 10rem;
+  }
+  
+  .count-wrapper span {
     position: absolute;
     bottom: 0;
     text-align: center;
